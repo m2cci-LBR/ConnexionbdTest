@@ -32,5 +32,11 @@ pipeline {
       }
     }
 
+    stage('Code coverage') {
+      steps {
+        sh 'echo "Hello from my pipeline"'
+      }
+    }
+
   }
 }
