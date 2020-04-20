@@ -22,6 +22,12 @@ pipeline {
         }
 
         stage('Sonar') {
+          agent {
+            docker {
+              image 'sonarqube'
+            }
+
+          }
           steps {
             echo 'sonar analyse'
           }
